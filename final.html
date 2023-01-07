@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard-css.css">
+    <title>Final Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- ================================================================================================== -->
+    <!--                          TOP NAV BAR                                                               -->
+    <!-- ================================================================================================== -->
+    <section id="topBar">
+
+        <div class="product">
+        <div class="productId">
+            <img class="productImg" src="finalproducticon.jpeg" />
+            <h1 class="productName">ExpennY</h1>
+        </div>
+        </div>
+
+        <div class="user">
+        <div class="UserId">
+            <h1 class="userName">Ved</h1>
+            <img class="userImg" src="myimage.jpeg" />
+        </div>
+        </div>
+    </section>
+
+
+    <div class="mainPage">
+
+
+        <!-- ================================================================================================== -->
+        <!--                   SIDEBAR                  MENU                                                    -->
+        <!-- ================================================================================================== -->
+        <div class="sidebar">
+            <a class="active" href="#dashboard">Dashboard</a>
+            <a href="#profile">Profile</a>
+            <a href="#settings">Settings</a>
+            <a href="#signout">Signout</a>
+        </div>
+
+
+        <!-- ================================================================================================== -->
+        <!--                   CONTENT                                                                          -->
+        <!-- ================================================================================================== -->
+        <div class="content">
+            <div class="left">
+                <div class="head">
+                    <h2>Your Expenses</h2>
+                    <h3>Month,Year</h3>
+                </div>
+                <div class="totalamount">
+                    <h2>Amount</h2>
+                </div>
+                <div class="img">
+                    <img src="pie.jpeg" alt="piechart">
+                </div>
+            </div>
+            <div class="right">
+                <div class="up">
+                    <h1>Track your Expenses</h1>
+                    <select title="expensetype" id="exptype" onchange="changeText()">
+                        <option value="Expenses">Expenses</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Investments">Investments</option>
+                    </select>
+                </div>
+                <div class="down">
+                    <form action="#" method="get" class="form">
+
+                        <p class="exp">Tracking Expenses</p>
+                        <input type="text" id="desc" name="desc" placeholder="Description">
+                        <input type="number" id="amt" name="amt" placeholder="Value in $">
+                        <div id="button" onclick="newTransaction()" class="addBtn">Add </div>
+
+                        <!-- </form>
+               <form id="tableForm"> -->
+                        <div>
+                            <table id="history">
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </table>
+                            <input type="button" id="btn2" value="Clear" onclick="clearTable()" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================================================================== -->
+    <!--                          FOOTER                                                                    -->
+    <!-- ================================================================================================== -->
+    <div id="footer">
+        <center>
+            <div class="main-footer">
+                <div class="logoinfo" data-aos="fade-up">
+                    <h2>ExpennY</h2>
+
+                    <div class="contact-details">
+                        <h1>Debug Thugs</h1>
+                    </div>
+                </div>
+            </div>
+            <footer>© Your Copyright 2023 All Rights Reserved</footer>
+        </center>
+    </div>
+    <script src="dashboard-js.js"></script>
+</body>
+
+</html>
